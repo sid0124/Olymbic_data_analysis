@@ -128,6 +128,7 @@ if user_choice =='Athlete wise Analysis':
     fig = ff.create_distplot([x1, x2, x3, x4], ["Overall", "Gold Medalist", "Silver medalist", "Bronze Medalist"],
                              show_hist=False, show_rug=False)
     fig.update_layout(autosize=False,width=1000,height =800)
+    st.title("Distribution of Age")
     st.plotly_chart(fig)
 
     x = []
@@ -153,7 +154,7 @@ if user_choice =='Athlete wise Analysis':
     st.title("Distribution of Age wrt Sports(Gold Medalist)")
     st.plotly_chart(fig)
 
-    st.title("Most Successful Athletes")
+    
     sports_list = df_1['Sport'].unique().tolist()
     sports_list.sort()
     sports_list.insert(0, "Overall")
